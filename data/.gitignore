@@ -1,0 +1,6 @@
+*-valid-urls.txt
+*-invalid-urls.txt
+raw/
+train/
+test/
+valid/

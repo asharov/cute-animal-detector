@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Cute Animal Detector</string>
+    <string name="evaluate_button_title">Evaluate cuteness</string>
+    <string name="reset_button_title">Restart</string>
+    <string name="cuteness_percentage_format">Cuteness %.0f%%</string>
+    <string name="cute">CUTE</string>
+    <string name="unsure">UNSURE</string>
+    <string name="not_cute">NOT CUTE</string>
+</resources>

@@ -1,0 +1,2 @@
+# Do not commit the model, it's huge
+*.tflite
