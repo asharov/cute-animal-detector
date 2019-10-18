@@ -122,9 +122,16 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+# Mac stuff
+.DS_Store
+
 # Emacs backup files
 *~
+
+# IntelliJ workspace
+.idea
 
 # Do not commit models, they're very big
 *.h5
 *.tflite
+*.mlmodel

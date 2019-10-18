@@ -99,14 +99,14 @@ check the model, you can run
 to run the trained model on data it didn't see yet, and see the
 accuracy that it achieves. Mine was about 98% accurate.
 
-## Convert the model for the app
+## Convert the model for the apps
 
-For now, there is only an Android version. The CoreML tools that would
-be used for iOS do not yet support Python 3.7. For Android, the model
-needs to be in the tensorflow-lite format, not in the Keras format
-that the model training step produced.
+There are two apps, one for Android and one for iOS. The trained model
+needs to be converted before it can be used in either app.
 
-The conversion is very simple, as there is a ready-made converted in
+For Android, the model needs to be in the tensorflow-lite format, not
+in the Keras format that the model training step produced. The
+conversion is very simple, as there is a ready-made converter in
 Tensorflow. Run
 ```
 ./convert-model-android.py
@@ -114,10 +114,24 @@ Tensorflow. Run
 to create a `iscute.tflite` file. Copy this file to the
 `iscute-android/app/src/main/assets` directory.
 
+For iOS, the model needs to be in Apple's CoreML format. Again here,
+there is a ready-made converter provided by Apple. Run
+```
+./convert-model-ios.py
+```
+to create a `iscute.mlmodel` file. Copy this file to the
+`iscute-ios/IsCute` directory.
+
 ## Compile and install the app
 
-Install [Android Studio](https://developer.android.com/studio) if you
+For the Android app, install
+[Android Studio](https://developer.android.com/studio) if you
 don't have it already. Open the directory `iscute-android` as a
 project there. Then you can either run the app directly on a connected
 Android device, or build an APK to install later. The app requires at
 least Android 6.
+
+For the iOS app, install [Xcode](https://developer.apple.com/xcode/) if
+you don't have it already. Open the project `iscute-ios/IsCute.xcodeproj`
+as a project there. Then you can run the app directly on a connected
+iPhone. The app requires iOS 13.
